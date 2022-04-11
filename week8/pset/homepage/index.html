@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Add bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!--Link Stylesheet-->
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+
+    <body>
+      <div class="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="#">
+            <img src="images/bo_frame.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Benjamin Orthner
+            </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="gallery.html">Gallery </a>
+              <a class="nav-item nav-link" href="#">Pricing</a>
+              <a class="nav-item nav-link disabled" href="#">Secret</a>
+            </div>
+          </div>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="password" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Unlock</button>
+            </form>
+        </nav>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+
+              <!--Clicker Game-->
+              <div class="game-window">
+
+                  <!--Progress Bar-->
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                           role="progressbar" style="width: 0%" aria-valuenow="0"
+                           aria-valuemin="0" aria-valuemax="100"
+                           id="clickGamePB"></div>
+                  </div>
+
+                  <!--Game Button-->
+                  <div class="horizontal-center">
+                      <button id="clickGameBtn">CLICK ME!</button>
+                  </div>
+              </div>
+
+          </div>
+          <div class="col-sm">
+            <div id="giant-link">
+                HUGE BUTTON
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--My js code-->
+      <script src=click_game.js></script>
+    </body>
+</html>

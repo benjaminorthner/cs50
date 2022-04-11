@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+            <script>
+
+                function resetColor(element, timeout){
+                    setTimeout(function() {
+                         element.style.backgroundColor = '';
+                        }, timeout);
+                }
+
+                function listen(){
+                    document.querySelectorAll('button').forEach(button => {
+                        button.addEventListener('click',
+                            function(){
+
+                                let answerElement = document.getElementById("answer");
+
+                                if (button.dataset.correct == "true"){
+
+                                    answerElement.innerHTML = "Correct!";
+                                    answerElement.setAttribute("class", "answerTrue");
+
+                                    // change the color
+                                    button.style.backgroundColor = '#00ff22';
+                                    // wait 500ms then reset the color
+                                    resetColor(button, 500);
+                                }
+                                else{
+                                    answerElement.innerHTML = "Incorrect!";
+                                    answerElement.setAttribute("class", "answerFalse");
+
+                                    // change the color
+                                    button.style.backgroundColor = '#ff5555';
+                                    // wait 500ms then reset the color
+                                    resetColor(button, 500);
+                                }
+
+                            });
+                    });
+                }
+
+                function checkAnswer(answer){
+
+                    let answerElement = document.getElementById("FormAnswer");
+
+                    let textBox = document.querySelector("#Q2answer");
+                    let userAnswer = textBox.value;
+
+                    if (userAnswer.toUpperCase() == answer.toUpperCase()){
+                        textBox.style.backgroundColor = "#55ff55"
+                        resetColor(textBox, 500);
+
+                        answerElement.innerHTML = "Correct!";
+                        answerElement.setAttribute("class", "answerTrue");
+                    }
+                    else{
+                        textBox.style.backgroundColor = "#ff5555"
+                        resetColor(textBox, 500);
+
+                        answerElement.innerHTML = "Incorrect!";
+                        answerElement.setAttribute("class", "answerFalse");
+
+                    }
+
+                }
+
+                document.addEventListener('DOMContentLoaded', listen);
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>
+                    What is the approximate ratio of people to sheep in New Zealand?
+                </h3>
+
+                <button>6 people per 1 sheep</button>
+                <button>3 people per 1 sheep</button>
+                <button>1 people per 1 sheep</button>
+                <button>1 person per 3 sheep</button>
+                <button data-correct="true">1 person per 6 sheep</button>
+
+                <h3 id="answer"></h3>
+            </div>
+
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>
+                    What is the best first name ever (It's Benjamin obviously)?
+                </h3>
+
+                <form onsubmit="checkAnswer('Benjamin'); return false;">
+                    <input id="Q2answer" type='text' autocomplete='off'>
+                    <input type='submit'>
+                </form>
+
+                <h3 id="FormAnswer"></h3>
+
+            </div>
+
+        </div>
+    </body>
+</html>

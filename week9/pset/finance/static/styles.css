@@ -1,0 +1,40 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.quote{
+    padding: 15px;
+}
+
+.table{
+    width:calc(100% - 20%);
+    margin:0 10%;
+}
+
+tr.buy{
+    background-color:rgb(239, 255, 239);
+}
+
+tr.sell{
+    background-color: rgb(255, 234, 234);
+}

@@ -1,0 +1,18 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+We see that sort1 perfoms best with sorted datasets and worst with random datasets.
+Because runtimes for Merge and Selection sort are independent of the starting arrangement of the data,
+sort1 must be Bubble sort which has an Omega(n) and O(n^2)
+
+sort2 uses: Merge Sort
+
+How do you know?:
+We know Merge sort has O(n log n) and Omega(n log n), and in the runtimes we see
+that there are no significant differences between runtimes for reversed, random and sorted.
+It is also faster than sort3
+
+sort3 uses: Selection Sort
+
+How do you know?:
+Same as with merge sort runtimes are independent of the order of the data O and Omega are the same.

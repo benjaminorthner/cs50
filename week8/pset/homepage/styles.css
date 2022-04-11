@@ -1,0 +1,57 @@
+.banner {
+    margin-bottom: 5rem;
+}
+
+
+body {
+    background-color: #313539;
+    color: white;
+}
+
+.game-window {
+    background-color: #222529;
+    border: 3px solid transparent;
+    padding: 3rem;
+    text-align: center;
+}
+
+.game-window:hover {
+    border: 3px solid;
+    border-color: #aaaaaa;
+}
+
+.horizontal-center {
+    text-align: center;
+}
+
+#clickGameBtn {
+    border: 4px solid;
+    border-color:#30000e;
+    border-radius: 2rem;
+    outline: 1px solid white;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    background-color: #ffffff;
+    color: #8c002e;
+    margin-top: 2rem;
+}
+
+#clickGameBtn:hover {
+    background-color: #8c002e;
+    color: white;
+}
+
+#clickGameBtn:active {
+    background-color: white;
+    color: #8c002e;
+}
+
+#giant-link {
+    background-color: gray;
+
+}
+
+#giant-link:hover {
+    background-color: green;
+}
